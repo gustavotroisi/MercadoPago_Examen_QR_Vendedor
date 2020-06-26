@@ -74,7 +74,7 @@ $(document).ready(function() {
 					// https://www.mercadopago.cl/developers/es/reference/instore_orders/_mpmobile_instore_qr_user_id_external_id/post/
 					
 					var orderJSON ={"external_reference": external_reference,
-									"notification_url": "https://gustavotroisi-mercadopago-qr.herokuapp.com/api/notifications/get",
+									"notification_url": "https://gustavotroisi-mercadopago-qr.herokuapp.com/api/notifications",
 									"items" : items
 									};
 
