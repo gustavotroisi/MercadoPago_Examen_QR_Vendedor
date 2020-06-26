@@ -362,16 +362,17 @@ $(document).ready(function() {
 
 		// REVISA AQUÍ:
 
-		var category = 1;   // Agrega aquí el número de categoría o MCC necesario para 
+		var category = 621102;   // Agrega aquí el número de categoría o MCC necesario para 
 							// Identificar al POS de restaurante
 
 
 		// REVISA AQUÍ:
 		// Comprueba que el posJSON sea el adecuado para crear un POS integrado correctamente.
-
+        //https://www.mercadopago.cl/developers/es/reference/pos/_pos/post/
+		
 		var posJSON ={"name":posName,
 					"external_store_id":externalStoreID,
-					"fixed_amount":false,
+					"fixed_amount":true,
 					"category_id":category,
 					"external_id":externalPOSID};
 
