@@ -68,7 +68,7 @@ $(document).ready(function() {
 
 					$('#qr').html("<img with='350px' height='350px' src='"+data.results[0].qr.image+"'>");
 					
-					// REVISA AQUÍ:
+					// REVISA AQUÍ: OK
 					// Agrega la URL notification_url 
 					// para recibir las notificaciones en tu endpoint público.
 					// https://www.mercadopago.cl/developers/es/reference/instore_orders/_mpmobile_instore_qr_user_id_external_id/post/
