@@ -343,11 +343,27 @@ $(document).ready(function() {
 		}
 
 		console.log(storeJSON);
-		$.post("https://api.mercadopago.com/users/"+user_id+"/stores?access_token="+access_token,JSON.stringify(storeJSON),function(results){
+		
+		jQuery.ajax({
+			type: "POST",
+			url: "https://api.mercadopago.com/users/"+user_id+"/stores?access_token="+access_token,
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			data: storeJSON,
+			success: function (results) {
+				console.log("Crea store:");
+				console.log(results);
+				jQuery("#responseStore").text(JSON.stringify(results));
+			}
+		});
+		
+		/*
+		$.post("https://api.mercadopago.com/users/"+user_id+"/stores?access_token="+access_token,{json:JSON.stringify(storeJSON)},function(results){
 			console.log("Crea store:");
 			console.log(results);
 			$("#responseStore").text(JSON.stringify(results));
 		});
+		*/
 	});
 
 ///////////////////////////////////////////////////////////////////////////
