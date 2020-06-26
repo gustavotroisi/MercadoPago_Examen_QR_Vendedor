@@ -71,9 +71,10 @@ $(document).ready(function() {
 					// REVISA AQUÍ:
 					// Agrega la URL notification_url 
 					// para recibir las notificaciones en tu endpoint público.
-
+					// https://www.mercadopago.cl/developers/es/reference/instore_orders/_mpmobile_instore_qr_user_id_external_id/post/
+					
 					var orderJSON ={"external_reference": external_reference,
-									"notification_url": "",
+									"notification_url": "https://gustavotroisi-mercadopago-qr.herokuapp.com/api/notifications/get",
 									"items" : items
 									};
 
@@ -320,7 +321,7 @@ $(document).ready(function() {
 		var externalStoreID = $('#externalStoreID').val();
 
 
-		// REVISA AQUÍ:
+		// REVISA AQUÍ: OK
 		// Modifica el storeJSON con la estructura necesaria para crear una Store correctamente.
 		// https://www.mercadopago.cl/developers/es/reference/stores/_users_user_id_stores/post/
 		
@@ -360,13 +361,13 @@ $(document).ready(function() {
 		var externalStoreID=$('#externalStoreIDPOS').val();
 		var externalPOSID=$('#externalPOSID').val();
 
-		// REVISA AQUÍ:
+		// REVISA AQUÍ: OK
 
 		var category = 621102;   // Agrega aquí el número de categoría o MCC necesario para 
 							// Identificar al POS de restaurante
 
 
-		// REVISA AQUÍ:
+		// REVISA AQUÍ: OK
 		// Comprueba que el posJSON sea el adecuado para crear un POS integrado correctamente.
         //https://www.mercadopago.cl/developers/es/reference/pos/_pos/post/
 		
@@ -391,7 +392,7 @@ $(document).ready(function() {
 }); // Fin document ready
 
 
-// REVISA AQUÍ:
+// REVISA AQUÍ: OK
 // La suma total de producto debería sumar $660
 // Haz los cambios necesarios en las cantidades y/o precio unitario para lograrlo
 
