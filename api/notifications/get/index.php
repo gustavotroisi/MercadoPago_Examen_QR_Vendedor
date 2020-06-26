@@ -19,6 +19,6 @@ $url = "https://api.mercadopago.com/v1/payments";
 
 //https://www.mercadopago.cl/developers/es/reference/payments/_payments_id/get/
 
-curl_call("GET",."$url/$collector_id?access_token=$access_token","");
+curl_call("GET","$url/$collector_id?access_token=$access_token","");
 
  ?>
