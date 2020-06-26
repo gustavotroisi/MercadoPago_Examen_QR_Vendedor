@@ -18,6 +18,6 @@ $store_id = $_REQUEST["store_id"];
 $url="https://api.mercadopago.com/pos/";
 
 
-curl_call("get","$url$store_id?access_token=$access_token","string");
+curl_call("get","$url?access_token=$access_token","string");
 
 ?>
