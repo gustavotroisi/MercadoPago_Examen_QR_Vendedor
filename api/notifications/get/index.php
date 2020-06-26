@@ -11,13 +11,13 @@ global $access_token,$collector_id,$notificationJSON;
 
 $lastResource = file_get_contents('../notifications.txt');
 
-$url= "";
-
 // REVISAR AQUÍ:
 // Agrega la $url necesaria para revisar el estado del pago en base al recurso recibido de la notificación
 
 // Sustituye el método por su correspondiente: get, put, post, delete
 
-curl_call("delete",."$url","");
+//https://www.mercadopago.cl/developers/es/reference/payments/_payments_id/get/
+
+curl_call("delete",."$url/$collector_id?access_token=$access_token","");
 
  ?>
