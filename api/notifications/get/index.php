@@ -17,7 +17,7 @@ $url = "https://api.mercadopago.com/v1/payments/".$collector_id."?access_token="
 
 // Sustituye el método por su correspondiente: get, put, post, delete
 
-//https://www.mercadopago.cl/developers/es/reference/payments/_payments_id/get/
+//https://www.mercadopago.cl/developers/es/reference/payments/_payments_id/get/  no
 
 curl_call("GET",$url,"");
 

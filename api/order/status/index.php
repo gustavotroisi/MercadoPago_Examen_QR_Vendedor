@@ -7,10 +7,10 @@ header('Content-type: application/json');
 include_once '../../global/functions.php';
 global $access_token, $collector_id;
 
-//$external_reference = $_REQUEST["external_reference"];
-$store_id =  $_REQUEST["store_id"];
+$external_reference = $_REQUEST["external_reference"];
 
-$url = "https://api.mercadopago.com/merchant_orders/".$store_id."?access_token=".$access_token;
+
+$url = "https://api.mercadopago.com/merchant_orders/search?".$external_reference."?access_token=".$access_token;
  
  // REVISA AQUÍ:
  // Qué método y endpoint de la API de Mercado Pago deberías poner aquí para poder hacer un get 
@@ -18,8 +18,8 @@ $url = "https://api.mercadopago.com/merchant_orders/".$store_id."?access_token="
  // Pista... revísalo bien...
  // Sustituye el método por su correspondiente: get, put, post, delete
  
- //https://www.mercadopago.cl/developers/es/reference/pos/_pos/get/
+$json = $_POST["json"];
 
-curl_call("get", $url, "");
+curl_call("get", $url, $json);
 
 ?>

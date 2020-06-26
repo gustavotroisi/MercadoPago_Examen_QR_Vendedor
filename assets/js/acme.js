@@ -101,8 +101,8 @@ $(document).ready(function() {
 
 							// Comprueba estado del pago vía Seach de Merchant_order
 
-							//$.get("api/order/status/",{"external_reference":external_reference},function(data){
-								$.get("api/order/status/",{"store_id":store_id},function(data){
+							$.get("api/order/status/",{"external_reference":external_reference},function(data){
+							//	$.get("api/order/status/",{"store_id":store_id},function(data){
 															
 								console.log("Search de Merchant_order:");
 								console.log(data);
