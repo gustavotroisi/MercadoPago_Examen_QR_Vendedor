@@ -328,7 +328,19 @@ $(document).ready(function() {
 		// https://www.mercadopago.cl/developers/es/reference/stores/_users_user_id_stores/post/
 		
 		
-		var storeJSON = {}
+		var storeJSON = {
+		    "name":storeName,
+		   "location":{  
+			  "street_number":streetNumber,
+			  "street_name":streetName,
+			  "city_name":city,
+			  "state_name":state,
+			  "latitude":latitude,
+			  "longitude":longitude,
+			  "reference":addressReference
+		   },
+		   "external_id":externalStoreID
+		}
 
 		console.log(storeJSON);
 		$.post("https://api.mercadopago.com/users/"+user_id+"/stores?access_token="+access_token,{json:JSON.stringify(storeJSON)},function(results){
