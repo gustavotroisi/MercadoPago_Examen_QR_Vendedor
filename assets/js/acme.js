@@ -341,13 +341,12 @@ $(document).ready(function() {
 
 		console.log(storeJSON);
 		
-		$.post("api/pos/create/",{json:JSON.stringify(posJSON)},function(results){
-			console.log("Crea POS/QR:");
+		$.post("api/store/create/",{json:JSON.stringify(storeJSON)},function(results){
+			console.log("Crea store:");
 			console.log(results);
-
-			$("#responsePOS").text(JSON.stringify(results));
-
+			$("#responseStore").text(JSON.stringify(results));
 		});
+		
 		
 	});
 
