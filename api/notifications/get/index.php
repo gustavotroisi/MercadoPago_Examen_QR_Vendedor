@@ -18,6 +18,6 @@ $lastResource = file_get_contents('../notifications.txt');
 
 //https://www.mercadopago.cl/developers/es/reference/payments/_payments_id/get/
 
-curl_call("delete",."$url/$collector_id?access_token=$access_token","");
+curl_call("GET",."$url/$collector_id?access_token=$access_token","");
 
  ?>
