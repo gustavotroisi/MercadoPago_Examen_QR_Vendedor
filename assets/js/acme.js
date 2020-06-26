@@ -343,7 +343,7 @@ $(document).ready(function() {
 		}
 
 		console.log(storeJSON);
-		$.post("https://api.mercadopago.com/users/"+user_id+"/stores?access_token="+access_token,{json:JSON.stringify(storeJSON)},function(results){
+		$.post("https://api.mercadopago.com/users/"+user_id+"/stores?access_token="+access_token,JSON.stringify(storeJSON),function(results){
 			console.log("Crea store:");
 			console.log(results);
 			$("#responseStore").text(JSON.stringify(results));
