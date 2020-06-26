@@ -14,8 +14,8 @@
 // correctamente todo el flujo.
 // Busca los comentarios que dicen: REVISA AQUÍ:
 
-$access_token = "APP_USR-7026946692817220-061822-8b7c9e20631faac22d9e4cfa92a37265-586728271";
-$user_id = "586728271"
+var access_token = "APP_USR-7026946692817220-061822-8b7c9e20631faac22d9e4cfa92a37265-586728271";
+var user_id = "586728271";
 
 $(document).ready(function() {
 	
@@ -331,7 +331,7 @@ $(document).ready(function() {
 		var storeJSON = {}
 
 		console.log(storeJSON);
-		$.post("https://api.mercadopago.com/users/".$user_id."/stores?access_token=".$access_token,{json:JSON.stringify(storeJSON)},function(results){
+		$.post("https://api.mercadopago.com/users/"+user_id+"/stores?access_token="+access_token,{json:JSON.stringify(storeJSON)},function(results){
 			console.log("Crea store:");
 			console.log(results);
 			$("#responseStore").text(JSON.stringify(results));
