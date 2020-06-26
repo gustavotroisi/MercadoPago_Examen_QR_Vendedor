@@ -14,9 +14,6 @@
 // correctamente todo el flujo.
 // Busca los comentarios que dicen: REVISA AQUÍ:
 
-var access_token = "APP_USR-7026946692817220-061822-8b7c9e20631faac22d9e4cfa92a37265-586728271";
-var user_id = "586728271";
-
 $(document).ready(function() {
 	
 	// Define 10 minutos de timeout de una orden
@@ -343,40 +340,13 @@ $(document).ready(function() {
 		}
 
 		console.log(storeJSON);
-		/*
-		jQuery.ajax({
-			type: "POST",
-			url: "https://api.mercadopago.com/users/"+user_id+"/stores?access_token="+access_token,
-			contentType: "application/json; charset=utf-8",
-			dataType: "json",
-			data: storeJSON,
-			success: function (results) {
-				console.log("Crea store:");
-				console.log(results);
-				jQuery("#responseStore").text(JSON.stringify(results));
-			}
-		});
-		*//*
-		jQuery.ajax({
-				type: "POST",
-				url: 'https://api.mercadopago.com/users/"+user_id+"/stores?access_token="+access_token',
-				contentType: "application/json",
-				dataType: 'json',
-				data: {
-					'body':JSON.stringify(storeJSON)
-				},
-				success: function (results) {
-					console.log("Crea store:");
-					console.log(results);
-					jQuery("#responseStore").text(JSON.stringify(results));
-				}
-			});
-	  */
 		
-		$.post("https://api.mercadopago.com/users/"+user_id+"/stores?access_token="+access_token,{json:JSON.stringify(storeJSON)},function(results){
-			console.log("Crea store:");
+		$.post("api/pos/create/",{json:JSON.stringify(posJSON)},function(results){
+			console.log("Crea POS/QR:");
 			console.log(results);
-			$("#responseStore").text(JSON.stringify(results));
+
+			$("#responsePOS").text(JSON.stringify(results));
+
 		});
 		
 	});
