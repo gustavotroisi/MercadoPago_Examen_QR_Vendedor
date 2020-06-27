@@ -111,8 +111,11 @@ $(document).ready(function() {
 								
 
 								//var elements = data.elements;
-								//var elements = data;
-								var elements = JSON.parse(data);
+								var elements = data;
+								
+								window.elementos = elements;
+								
+								//var elements = JSON.parse(data);
 								//var elements = JSON.stringify(data.elements);
 								var totalElements = data.total;
 								
