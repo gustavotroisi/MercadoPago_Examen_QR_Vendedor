@@ -12,10 +12,10 @@ global $access_token;
  // crear un POS/QR?
  // Sustituye el método por su correspondiente: get, put, post, delete
 
-
+$pos_id =  $_REQUEST["pos_id"];
 $external_id = $_REQUEST["external_id"];
 $store_id = $_REQUEST["store_id"];
-$url="https://api.mercadopago.com/pos";
+$url="https://api.mercadopago.com/pos".$pos_id;
 
 
 curl_call("get","$url?access_token=$access_token","string");

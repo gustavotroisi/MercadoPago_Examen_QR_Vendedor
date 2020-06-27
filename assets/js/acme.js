@@ -56,7 +56,7 @@ $(document).ready(function() {
 		    // Muestra el código QR del punto de venta seleccionado
 
 		    // Llama al servicio de obtención de información de un POS/QR en base al external_pos_id o también llamado external_id
-			$.get("api/pos/get/",{"external_id":external_id,"store_id":store_id},function(data){
+			$.get("api/pos/get/",{"external_id":external_id,"store_id":store_id,"pos_id":pos_id},function(data){
 				console.log("Obtención información de QR:");
 				console.log(data);
 
@@ -405,6 +405,8 @@ $(document).ready(function() {
 			console.log(results);
 
 			$("#responsePOS").text(JSON.stringify(results));
+			var pos_id=results.id;
+			console.log('POS_ID:'+pos_id);
 
 		});
 	});
