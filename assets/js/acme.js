@@ -110,7 +110,7 @@ $(document).ready(function() {
 								
 								
 
-								var elements = data.elements;
+								//var elements = data.elements;
 								//var elements = JSON.stringify(data.elements);
 								var totalElements = data.total;
 								
@@ -118,8 +118,9 @@ $(document).ready(function() {
 								if(totalElements>0){ 
 									
 									console.log('TOTAL: '+totalElements+' ELEMENTO: '+elements[totalElements-1]);									
-									var orderStatus = elements[totalElements-1].status;
+									//var orderStatus = elements[totalElements-1].status;
 									//var orderStatus =data.status;
+									var orderStatus = elements[totalElements-1].payments[0].status=="rejected";
 									
 									
 									$('#orderStatus').text(orderStatus);
