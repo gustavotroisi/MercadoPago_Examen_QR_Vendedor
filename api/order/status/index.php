@@ -10,7 +10,8 @@ global $access_token, $collector_id;
 $external_reference = $_REQUEST["external_reference"];
 
 
-$url = "https://api.mercadopago.com/merchant_orders/search?access_token=".$access_token;
+//$url = "https://api.mercadopago.com/merchant_orders/search?access_token=".$access_token;
+$url = "https://api.mercadopago.com/merchant_orders?access_token=".$access_token;
  
  // REVISA AQUÍ:
  // Qué método y endpoint de la API de Mercado Pago deberías poner aquí para poder hacer un get 
@@ -22,6 +23,6 @@ $url = "https://api.mercadopago.com/merchant_orders/search?access_token=".$acces
 $json->external_reference = $external_reference;
 $json = json_encode($json);
 
-curl_call("get", $url, $json);
+curl_call("GET", $url, $json);
 
 ?>
