@@ -118,7 +118,7 @@ $(document).ready(function() {
 								
 								if(totalElements>0){ 
 									
-									console.log('TOTAL: '+totalElements+' ELEMENTO: '+elements[totalElements-1]);									
+									console.log('TOTAL: '+totalElements+' ELEMENTO: '+data.elements[totalElements-1]);									
 									//var orderStatus = elements[totalElements-1].status;
 									//var orderStatus =data.status;
 									var orderStatus = elements[totalElements-1].payments[0].status=="rejected";
