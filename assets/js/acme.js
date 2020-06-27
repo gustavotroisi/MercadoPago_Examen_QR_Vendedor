@@ -112,13 +112,13 @@ $(document).ready(function() {
 
 								var elements = data.elements;
 								var totalElements = data.total;
-								console.log('TOTAL: '+totalElements);
+								
 								
 								if(totalElements>0){ 
 
 									//var orderStatus = elements[totalElements-1].status;
 									var orderStatus =data.status;
-									
+									console.log('ELEMENTO: '+elements[totalElements-1]);
 									
 									$('#orderStatus').text(orderStatus);
 									$('#loading').html("<img src='assets/img/ajax-loader.gif'>");
