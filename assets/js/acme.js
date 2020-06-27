@@ -111,9 +111,9 @@ $(document).ready(function() {
 								
 
 								//var elements = data.elements;
-								var elements = data;
+								//var elements = data;
 								//var elements = JSON.stringify(data.elements);
-								var totalElements = elements.total;
+								var totalElements = data.total;
 								
 								
 								if(totalElements>0){ 
