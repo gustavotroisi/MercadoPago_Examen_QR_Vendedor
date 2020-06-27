@@ -116,8 +116,8 @@ $(document).ready(function() {
 								
 								if(totalElements>0){ 
 
-									//var orderStatus = elements[totalElements-1].status;
-									var orderStatus =data.status;
+									var orderStatus = elements[totalElements-1].status;
+									//var orderStatus =data.status;
 									console.log('ELEMENTO: '+elements);
 									
 									$('#orderStatus').text(orderStatus);
