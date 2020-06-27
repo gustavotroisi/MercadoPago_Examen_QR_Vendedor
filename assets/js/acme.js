@@ -105,9 +105,10 @@ $(document).ready(function() {
 							//	$.get("api/order/status/",{"store_id":store_id},function(data){
 															
 								console.log("Search de Merchant_order:");
+								console.log(typeof data);
 								console.log(data);
 								
-								console.log(typeof data);
+								
 
 								var elements = data.elements;
 								var totalElements = data.total;
@@ -148,6 +149,7 @@ $(document).ready(function() {
 
 							$.get("api/notifications/get/",{},function(data){
 								console.log("Search Notifications:");
+								console.log(typeof data);
 								console.log(data);
 
 								if(data.status=="opened" && data.external_reference==external_reference){
