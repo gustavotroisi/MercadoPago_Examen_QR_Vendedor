@@ -116,7 +116,9 @@ $(document).ready(function() {
 								
 								if(totalElements>0){ 
 
-									var orderStatus = elements[totalElements-1].status;
+									//var orderStatus = elements[totalElements-1].status;
+									var orderStatus =data.status;
+									
 									$('#orderStatus').text(orderStatus);
 									$('#loading').html("<img src='assets/img/ajax-loader.gif'>");
 
