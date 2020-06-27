@@ -111,8 +111,8 @@ $(document).ready(function() {
 								
 
 								//var elements = data.elements;
-								//var totalElements = data.total;
-								var totalElements = total;
+								var totalElements = data.total;
+								
 								
 								if(totalElements>0){ 
 
