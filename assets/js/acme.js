@@ -110,7 +110,7 @@ $(document).ready(function() {
 								
 								
 
-								//var elements = data.elements;
+								var elements = data.elements;
 								var totalElements = data.total;
 								
 								
