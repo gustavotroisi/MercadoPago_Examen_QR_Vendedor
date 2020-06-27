@@ -110,7 +110,8 @@ $(document).ready(function() {
 								
 								
 
-								var elements = data.elements;
+								//var elements = data.elements;
+								var elements = JSON.stringify(data.elements);
 								var totalElements = data.total;
 								
 								
