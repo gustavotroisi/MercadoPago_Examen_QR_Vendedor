@@ -106,6 +106,7 @@ $(document).ready(function() {
 															
 								console.log("Search de Merchant_order:");
 								console.log(data);
+								
 
 								var elements = data.elements;
 								var totalElements = data.total;
