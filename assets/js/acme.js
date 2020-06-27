@@ -115,10 +115,11 @@ $(document).ready(function() {
 								
 								
 								if(totalElements>0){ 
-
+									
+									console.log('TOTAL: '+totalElements+' ELEMENTO: '+elements);									
 									var orderStatus = elements[totalElements-1].status;
 									//var orderStatus =data.status;
-									console.log('ELEMENTO: '+elements);
+									
 									
 									$('#orderStatus').text(orderStatus);
 									$('#loading').html("<img src='assets/img/ajax-loader.gif'>");
