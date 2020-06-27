@@ -55,7 +55,6 @@ $(document).ready(function() {
 
 		    // Muestra el código QR del punto de venta seleccionado
 			
-			$("#responsePOS").text(JSON.stringify(results));
 			var pos_id=$("#responsePOS").val();
 			pos_id = JSON.parse(pos_id);
 			pos_id = pos_id.id;
