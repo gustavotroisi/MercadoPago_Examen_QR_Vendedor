@@ -23,7 +23,9 @@ $url = "https://api.mercadopago.com/merchant_orders?access_token=".$access_token
 //https://www.mercadopago.cl/developers/es/reference/payments/_payments_id/get/  no
 
 
-$json = $lastResource;
+//$json = '{"collector_id":$collector_id}';
+$json->collector_id = $collector_id;
+$json = json_encode($json);
 
 curl_call("GET",$url,$json);
 
