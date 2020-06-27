@@ -67,11 +67,12 @@ $(document).ready(function() {
 
 				// Si existe external_ID...
 
-				if(data.paging.total>0){
+				//if(data.paging.total>0){
 			
 					// Muestra el código QR en pantalla:
 
-					$('#qr').html("<img with='350px' height='350px' src='"+data.results[0].qr.image+"'>");
+					//$('#qr').html("<img with='350px' height='350px' src='"+data.results[0].qr.image+"'>");
+					$('#qr').html("<img with='350px' height='350px' src='"+data.qr.image+"'>");
 					
 					// REVISA AQUÍ: OK
 					// Agrega la URL notification_url 
@@ -205,13 +206,13 @@ $(document).ready(function() {
 						}, 3000); // finaliza intervalo
 
 					}); // end get pos information
-				
+				/*
 				}else{ // end if total
 
 					$('#qr').html("This External POS ID: 'EPOSID' does not exists<br/>for this Store ID: 'Store_id'".replace("EPOSID",external_id).replace("Store_id",store_id));
 
 				} 
-
+*/
 			});
 
 
