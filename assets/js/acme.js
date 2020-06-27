@@ -110,8 +110,9 @@ $(document).ready(function() {
 								
 								
 
-								var elements = data.elements;
-								var totalElements = data.total;
+								//var elements = data.elements;
+								//var totalElements = data.total;
+								var totalElements = total;
 								
 								if(totalElements>0){ 
 
