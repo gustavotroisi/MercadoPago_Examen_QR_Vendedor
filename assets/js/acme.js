@@ -87,6 +87,9 @@ $(document).ready(function() {
 
 						// Muestra JSON de la orden creada
 						$('#createdOrder').text(JSON.stringify(data));
+						
+						var preference_id = data.id;
+						console.log('PREFERENCE ID: '+preference_id);
 
 						// Inicia cuenta a trás de 10 minutos
 						display = $('#countDown');
@@ -101,7 +104,7 @@ $(document).ready(function() {
 
 							// Comprueba estado del pago vía Seach de Merchant_order
 
-							$.get("api/order/status/",{"external_reference":external_reference},function(data){
+							$.get("api/order/status/",{"external_reference":external_reference,"preference_id":preference_id},function(data){
 							//	$.get("api/order/status/",{"store_id":store_id},function(data){
 															
 								console.log("Search de Merchant_order:");
@@ -111,28 +114,29 @@ $(document).ready(function() {
 								
 
 								//var elements = data.elements;
-								var elements = data;
+								//var elements = data;
 								
-								window.elementos = elements;
+								//window.elementos = elements;
 								
 								//var elements = JSON.parse(data);
 								//var elements = JSON.stringify(data.elements);
-								var totalElements = data.total;
+								//var totalElements = data.total;
 								
 								
-								if(totalElements>0){ 
+								//if(totalElements>0){ 
 									
-									console.log('TOTAL: '+totalElements+' ELEMENTO: '+elements[totalElements-1]);									
+									//console.log('TOTAL: '+totalElements+' ELEMENTO: '+elements[totalElements-1]);									
 									//var orderStatus = elements[totalElements-1].status;
 									//var orderStatus =data.status;
-									var orderStatus = elements[totalElements-1].payments[0].status=="rejected";
-									
+									//var orderStatus = elements[totalElements-1].payments[0].status=="rejected";
+									var orderStatus =data.status;
 									
 									$('#orderStatus').text(orderStatus);
 									$('#loading').html("<img src='assets/img/ajax-loader.gif'>");
 
 									try{
-										if(orderStatus=="opened" && elements[totalElements-1].payments[0].status=="rejected"){
+										//if(orderStatus=="opened" && elements[totalElements-1].payments[0].status=="rejected"){
+											if(orderStatus=="opened" && orderStatus=="rejected"){
 											// print 
 											if($('#paymentStatusRejected').text()==""){
 												$('#paymentStatusRejected').text(JSON.stringify(data));
@@ -153,7 +157,7 @@ $(document).ready(function() {
 
 										
 									} // Fin if
-								}// Fin totalElements
+								//}// Fin totalElements
 							});
 
 							
