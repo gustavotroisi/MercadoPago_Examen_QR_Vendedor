@@ -18,7 +18,9 @@ $url = "https://api.mercadopago.com/merchant_orders/search?access_token=".$acces
  // Pista... revísalo bien...
  // Sustituye el método por su correspondiente: get, put, post, delete
  
-$json = $_POST["json"];
+//$json = $_POST["json"];
+$json->external_reference = $external_reference;
+$json = json_encode($json);
 
 curl_call("get", $url, $json);
 
