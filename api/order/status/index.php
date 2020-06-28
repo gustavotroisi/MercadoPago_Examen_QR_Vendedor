@@ -8,10 +8,12 @@ include_once '../../global/functions.php';
 global $access_token, $collector_id;
 
 $external_reference = $_REQUEST["external_reference"];
-$preference_id = $_REQUEST["preference_id"];
+//$preference_id = $_REQUEST["preference_id"];
 
 //$url = "https://api.mercadopago.com/merchant_orders/search?access_token=".$access_token;
 //$url = "https://api.mercadopago.com/merchant_orders?access_token=".$access_token;
+
+
 
 $url = "https://api.mercadopago.com/merchant_orders?external_reference=".$external_reference."&access_token=".$access_token;
  
